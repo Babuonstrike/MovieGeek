@@ -34,15 +34,6 @@ header h3:hover, i:hover
     font-family: 'Allan', cursive;
     cursor: pointer;
 }
-
-.logo h3
-{
-    background: rgb(10,6,90);
-    background: linear-gradient(90deg, rgba(10,6,90,1) 0%, rgba(145,71,255,1) 47%, rgba(228,22,85,1) 100%);
-    font-size: 1.7rem;
-    font-family: 'Allan', cursive;
-}
-
 .sec-nav 
 {
     display:inline-flex; 
@@ -59,7 +50,7 @@ header h3:hover, i:hover
     align-self: center;
     color:#FFFFFF;
     font-size: 1.2rem;
-    font-family: 'Acme', cursive;
+    font-family: 'DM Sans', cursive;
 }
 
     
