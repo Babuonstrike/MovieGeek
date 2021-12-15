@@ -31,7 +31,7 @@ header h3:hover, i:hover
     align-content: center;
     gap: .5em;
     color: #FFFFFF;
-    font-family: 'Lobster', cursive;
+    font-family: 'Allan', cursive;
     cursor: pointer;
 }
 
@@ -39,7 +39,7 @@ header h3:hover, i:hover
 {
     color: #eeca64;
     font-size: 1.7rem;
-    font-family: 'Lobster', cursive;
+    font-family: 'Allan', cursive;
 }
 
 .sec-nav 
