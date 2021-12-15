@@ -13,6 +13,7 @@ html
 header h3:hover, i:hover
 {
     color: #FF0077;
+    background-position: 0 100%;
 }
 .nav-bar-container
 {
