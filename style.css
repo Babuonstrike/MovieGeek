@@ -37,7 +37,8 @@ header h3:hover, i:hover
 
 .logo h3
 {
-    color: #9900ff;
+    background: rgb(10,6,90);
+    background: linear-gradient(90deg, rgba(10,6,90,1) 0%, rgba(145,71,255,1) 47%, rgba(228,22,85,1) 100%);
     font-size: 1.7rem;
     font-family: 'Allan', cursive;
 }
