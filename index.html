@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Passero+One&family=Cookie&family=Grand+Hotel&family=Mouse+Memoirs&family=Allan:wght@700&family=Lobster&family=Roboto+Slab&family=Ubuntu&family=Roboto+Mono&family=Nova+Script&family=Syne+Mono&family=Kenia&family=Geostar&family=Warnes&family=Acme&family=Anton&family=Langar&family=Fruktur&family=Abril+Fatface&family=Lobster&family=Bungee&family=Carter+One&family=Caveat:wght@700&family=DM+Sans:wght@700&family=Irish+Grover&family=Lobster&family=Pacifico&family=Permanent+Marker&family=Qahiri&family=Rampart+One&family=Satisfy&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="tv.png">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
     <title>MovieGeeks</title>
 </head>
-<body>
+<body class="overflow-x-hidden">
     <!-- Tamil movies card template -->
     <template id="tamil-movie-card-template">
-        <div class="mov-card-cont">
-            <img src="https://i1.behindwoods.com/tamil-movies/oh-manapenne/images/thumbnails/oh-manapenne-review.jpg" alt="poster">
+        <div class="mov-card-cont col-12 col-sm-4 col-lg-2">
+            <img loading="lazy" src="https://i1.behindwoods.com/tamil-movies/oh-manapenne/images/thumbnails/oh-manapenne-review.jpg" alt="poster">
             <h5>Oh Manapenne</h5> 
             <div class="rating">
                 <span><i class="fab fa-imdb"></i><span class="score"></span> </span> 
@@ -24,8 +25,8 @@
     <!-- Tamil movies card template -->
     <!-- English movies card template -->
     <template id="english-movie-card-template">
-        <div class="mov-card-cont">
-            <img src="https://resizing.flixster.com/l_Vw-O0ZRNSSHBtye6MXe471Yks=/206x305/v2/https://resizing.flixster.com/4amRuM3jqSEr3GiFgBHrFPSHxM4=/ems.ZW1zLXByZC1hc3NldHMvbW92aWVzLzdhYTI2NDJkLTU5YTYtNDNkOS05ZWQxLWZiNjFlOTZmYjZlZS5qcGc=" alt="movie poster">
+        <div class="mov-card-cont col-12 col-sm-4 col-lg-2">
+            <img loading="lazy" src="https://resizing.flixster.com/l_Vw-O0ZRNSSHBtye6MXe471Yks=/206x305/v2/https://resizing.flixster.com/4amRuM3jqSEr3GiFgBHrFPSHxM4=/ems.ZW1zLXByZC1hc3NldHMvbW92aWVzLzdhYTI2NDJkLTU5YTYtNDNkOS05ZWQxLWZiNjFlOTZmYjZlZS5qcGc=" alt="movie poster">
             <h5>Dune</h5>
             <div class="rating">
                 <span><i class="fab fa-imdb"></i><span class="score"></span> </span> 
@@ -37,7 +38,78 @@
     <!-- English movies card template -->
 
     <header>
-        <nav class="nav-bar-container">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid position-relative">
+              <a class="navbar-brand" href="index.html">
+                <img class="img-fluid" src="http://ares2.cooltext.com/images/fb7/fb71e7683199495907601d7f10761d78b5a73dec.png" width="200px" alt="moviegeeks">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#movies">MOVIES</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      SERIES
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Web Series</a></li>
+                      <li><a class="dropdown-item" href="#">Tv Series</a></li>
+                      <li><a class="dropdown-item" href="#">Animation</a></li>
+                      <li><a class="dropdown-item" href="#">Cartoon</a></li>
+                      <li><a class="dropdown-item" href="#">Motion Comics</a></li>                 
+                    </ul>
+                  </li>
+                  <li id="mega_menu" class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      SERIES
+                    </a>
+                    <ul class="dropdown-menu position-absolute w-100">
+                        <div class="row">
+                            <div class="col">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Adventure</a></li>
+                                <li><a class="dropdown-item" href="#">Animation</a></li>
+                                <li><a class="dropdown-item" href="#">Cartoon</a></li>
+                                <li><a class="dropdown-item" href="#">Motion Comics</a></li>                 
+          
+                            </div>
+                            <div class="col">
+                                <li><a class="dropdown-item" href="#">Motion Comics</a></li>                 
+                                <li><a class="dropdown-item" href="#">Motion Comics</a></li>                 
+                                <li><a class="dropdown-item" href="#">Motion Comics</a></li>                 
+                                <li><a class="dropdown-item" href="#">Motion Comics</a></li>                 
+                                <li><a class="dropdown-item" href="#">Motion Comics</a></li>                 
+          
+                            </div>
+                            <div class="col">
+                                <li><a class="dropdown-item" href="#">Motion Comics</a></li>                 
+                                <li><a class="dropdown-item" href="#">Motion Comics</a></li>                 
+                                <li><a class="dropdown-item" href="#">Motion Comics</a></li>                 
+                                <li><a class="dropdown-item" href="#">Motion Comics</a></li>                 
+                                <li><a class="dropdown-item" href="#">Motion Comics</a></li>                 
+          
+                            </div>
+                        </div>
+                    </ul>
+                  </li>
+                
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="search here..." aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+        <!-- ----------------------old navbar-------------------- -->
+        <!-- <nav class="nav-bar-container">
             <div class="logo nav-bar">
                 <a href="index.html"><img src="https://images.cooltext.com/5570989.png" style="width:9vw" alt="moviegeeks"></a>
             </div>
@@ -98,11 +170,12 @@
                 </form>
                 <a href="#"><i class="fas fa-user-plus"></i></a>
             </div>
-        </nav>
+        </nav> -->
+        <!-- ----------------------old navbar-------------------- -->
     </header>
     <section>
-        <div class="banner">
-            <div class="poster">
+        <div class="banner row">
+            <div class="poster col-12 col-lg-4">
                 <video autoplay loop muted>
                     <source src="JW3.mp4">
                 </video>
@@ -121,7 +194,7 @@
                     <button><i class="fas fa-play-circle"></i> Play Movie</button>
                 </div>
             </div>
-            <div class="poster">
+            <div class="poster col-12 col-lg-4">
                 <video autoplay loop muted>
                     <source src="ZSJL.mp4">
                 </video>
@@ -140,7 +213,7 @@
                     <button><i class="fas fa-play-circle"></i> Play Movie</button>
                 </div>
             </div>
-            <div class="poster">
+            <div class="poster col-12 col-lg-4">
                 <video autoplay loop muted>
                     <source src="RPO.mp4">
                 </video>
@@ -161,243 +234,260 @@
         </div>
     </section>
     <main>
-        <div class="movies">
+        <div class="movies ps-4">
             <a name="movies"></a>
             <h1>Movies</h1>
-            <div class="movie-list">
-                <a href="#Tamil" class="active">Tamil</a>
-                <a href="#English">English</a>
-                <a href="#Malayalam">Malayalam</a>
-                <a href="#Telugu">Telugu</a>
-                <a href="#Kannada">Kannada</a>
-                <a href="#Hindi">Hindi</a>
+            <div class="row movie-list ">
+                <a href="#Tamil" class="row-cols-xl-6 col-lg-1 active">Tamil</a>
+                <a href="#English" class="row-cols-xl-6 col-lg-1">English</a>
+                <a href="#Malayalam" class="row-cols-xl-6 col-lg-1">Malayalam</a>
+                <a href="#Telugu" class="row-cols-xl-6 col-lg-1">Telugu</a>
+                <a href="#Kannada" class="row-cols-xl-6 col-lg-1">Kannada</a>
+                <a href="#Hindi" class="row-cols-xl-6 col-lg-1">Hindi</a>
             </div>
         </div>
-        <section class="split">
-            <aside>
-                <div class="filter">
-                    <a href="#"><h2>Filter</h2></a>
-                    <ul>
-                        <li class="sub-li"><h3>Category</h3></li>
-                            <ul>
-                                <li><input class="chk-li" type="checkbox"> <label for="chk-li">Movies</label></li>
-                                <li><input class="chk-li" type="checkbox"> <label for="chk-li">TV Series</label></li>
-                                <li><input class="chk-li" type="checkbox"> <label for="chk-li">Web Series</label></li>
-                                <li><input class="chk-li" type="checkbox"> <label for="chk-li">Motion Comics</label></li>
-                                <li><input class="chk-li" type="checkbox"> <label for="chk-li">Animation</label></li>
-                            </ul>
-                        <li class="sub-li"><h3>Genre</h3></li>
-                            <ul>
-                                <li><input class="chk-li" type="checkbox"> <label for="chk-li">Action</label></li>
-                                <li><input class="chk-li" type="checkbox"> <label for="chk-li">Adventure</label></li>
-                                <li><input class="chk-li" type="checkbox"> <label for="chk-li">Crime</label></li>
-                                <li><input class="chk-li" type="checkbox"> <label for="chk-li">Comedy</label></li>
-                                <li><input class="chk-li" type="checkbox"> <label for="chk-li">Drama</label></li>
-                                <li><input class="chk-li" type="checkbox"> <label for="chk-li">mystery</label></li>
-                                <li><input class="chk-li" type="checkbox"> <label for="chk-li">Fantasy</label></li>
-                                <li><input class="chk-li" type="checkbox"> <label for="chk-li">Fiction</label></li>
-                                <li><input class="chk-li" type="checkbox"> <label for="chk-li">Historical</label></li>
-                                <li><input class="chk-li" type="checkbox"> <label for="chk-li">Horror</label></li>
-                                <li><input class="chk-li" type="checkbox"> <label for="chk-li">Romance</label></li>
-                                <li><input class="chk-li" type="checkbox"> <label for="chk-li">Satire</label></li>
-                                <li><input class="chk-li" type="checkbox"> <label for="chk-li">Science fiction</label></li>
-                                <li><input class="chk-li" type="checkbox"> <label for="chk-li">Speculative</label></li>
-                                <li><input class="chk-li" type="checkbox"> <label for="chk-li">Thriller</label></li>
-                            </ul>
-                        <li class="sub-li"><h3>Top List</h3></li>
-                            <ul>
-                                <li><input class="chk-li" type="checkbox"> <label for="chk-li">Top 10</label></li>
-                                <li><input class="chk-li" type="checkbox"> <label for="chk-li">Top 20</label></li>
-                                <li><input class="chk-li" type="checkbox"> <label for="chk-li">Top 50</label></li>
-                                <li><input class="chk-li" type="checkbox"> <label for="chk-li">Top 100</label></li>
-                            </ul>
-                    </ul>
-                </div>
-                <div class="sort">
-                    <a href="#"><h2>Sort</h2></a>
-                    <ul>
-                        <li><input type="radio" class="rd-btn" id="rd-btn1" name="Sort" value="Trending"> <label for="rdbtn1">Trending</label></li>
-                        <li><input type="radio" class="rd-btn" id="rd-btn2" name="Sort" value="Most Popular"> <label for="rdbtn2">Most Popular</label></li>
-                        <li><input type="radio" class="rd-btn" id="rd-btn3" name="Sort" value="Most Relevant"> <label for="rdbtn3">Most Relevant</label></li>
-                        <li><input type="radio" class="rd-btn" id="rd-btn4" name="Sort" value="90s"> <label for="rdbtn4">90s</label></li>
-                        <li><input type="radio" class="rd-btn" id="rd-btn5" name="Sort" value="2K"> <label for="rdbtn5">2K</label></li>
-                    </ul>   
-                </div>
-            </aside>
-            <article>
-                <a name="Tamil"></a>
-                <h3 class="sub-head">Tamil</h3>
-                <div id="tamil-movie-cards" class="movie-cards"></div>
-                <hr>
-                <a name="English"></a>
-                <h3 class="sub-head">English</h3>
-                <div id="english-movie-cards" class="movie-cards"></div>
-                <hr>
-                <a name="Malayalam"></a>
-                <h3 class="sub-head">Malayalam</h3>
-                <div class="movie-cards">
-                    <div class="mov-card-cont">
-                        <img src="https://static.toiimg.com/thumb/msid-70735077,width-219,height-317,imgsize-109740/70735077.jpg" alt="poster">
-                        <h5>Anugraheethan Antony</h5>
-                        <h6>Comedy</h6>
-                        <h6>2021 . 2h</h6>
+        <section class="split mt-4">
+            <div class="row">
+                <aside class="col-12  col-md-4 col-lg-3 row text-center text-lg-start h-25 ps-5">
+                    <div class="filter col-12  col-lg-12">
+                        <a href="#"><h2>Filter</h2></a>
+                        <ul>
+                            <div class="dropdown">
+                                <h4 class="text-danger dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Category
+                                </h4>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href=""><input class="chk-li" type="checkbox"> <label for="chk-li">Movies</label></a></li>
+                                  <li><a class="dropdown-item" href=""><input class="chk-li" type="checkbox"> <label for="chk-li">TV Series</label></a></li>
+                                  <li><a class="dropdown-item" href=""><input class="chk-li" type="checkbox"> <label for="chk-li">Web Series</label></a></li>
+                                  <li><a class="dropdown-item" href=""><input class="chk-li" type="checkbox"> <label for="chk-li">Motion Comics</label></a></li>
+                                  <li><a class="dropdown-item" href=""><input class="chk-li" type="checkbox"> <label for="chk-li">Animation</label></a></li>
+                                </ul>
+                              </div>
+                            <div class="dropdown">
+                                <h4 class="text-danger dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Genre
+                                </h4>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href=""><input class="chk-li" type="checkbox"> <label for="chk-li">Action</label></a></li>
+                                  <li><a class="dropdown-item" href=""><input class="chk-li" type="checkbox"> <label for="chk-li">Adventure </label></a></li>
+                                  <li><a class="dropdown-item" href=""><input class="chk-li" type="checkbox"> <label for="chk-li">Crime </label></a></li>
+                                  <li><a class="dropdown-item" href=""><input class="chk-li" type="checkbox"> <label for="chk-li">Comedy </label></a></li>
+                                  <li><a class="dropdown-item" href=""><input class="chk-li" type="checkbox"> <label for="chk-li">Drama</label></a></li>
+                                  <li><a class="dropdown-item" href=""><input class="chk-li" type="checkbox"> <label for="chk-li">mystery</label></a></li>
+                                  <li><a class="dropdown-item" href=""><input class="chk-li" type="checkbox"> <label for="chk-li">Fantasy</label></a></li>
+                                  <li><a class="dropdown-item" href=""><input class="chk-li" type="checkbox"> <label for="chk-li">Fiction</label></a></li>
+                                  <li><a class="dropdown-item" href=""><input class="chk-li" type="checkbox"> <label for="chk-li">Historical</label></a></li>
+                                  <li><a class="dropdown-item" href=""><input class="chk-li" type="checkbox"> <label for="chk-li">Horror</label></a></li>
+                                  <li><a class="dropdown-item" href=""><input class="chk-li" type="checkbox"> <label for="chk-li">Romance</label></a></li>
+                                  <li><a class="dropdown-item" href=""><input class="chk-li" type="checkbox"> <label for="chk-li">Satire</label></a></li>
+                                  <li><a class="dropdown-item" href=""><input class="chk-li" type="checkbox"> <label for="chk-li">Science fiction</label></a></li>
+                                  <li><a class="dropdown-item" href=""><input class="chk-li" type="checkbox"> <label for="chk-li">Speculative</label></a></li>
+                                  <li><a class="dropdown-item" href=""><input class="chk-li" type="checkbox"> <label for="chk-li">Thriller</label></a></li>
+                                </ul>
+                              </div>
+                              <div class="dropdown">
+                                <h4 class="text-danger dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Top List
+                                </h5>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href=""><input class="chk-li" type="checkbox"> <label for="chk-li">Top 10</label></a></li>
+                                  <li><a class="dropdown-item" href=""><input class="chk-li" type="checkbox"> <label for="chk-li">Top 20</label></a></li>
+                                  <li><a class="dropdown-item" href=""><input class="chk-li" type="checkbox"> <label for="chk-li">Top 50</label></a></li>
+                                  <li><a class="dropdown-item" href=""><input class="chk-li" type="checkbox"> <label for="chk-li">Top 100</label></a></li>
+                                </ul>
+                              </div>
+                        </ul>
                     </div>
-                    <div class="mov-card-cont">
-                        <img src="https://static.toiimg.com/thumb/msid-81927200,width-219,height-317,imgsize-20512/81927200.jpg" alt="poster">
-                        <h5>Chathur Mukham</h5>
-                        <h6>Horror . Thriller</h6>
-                        <h6>2021 . 2h 18min</h6>
+                    <div class="sort col-12  col-lg-12">
+                        <a href="#"><h2>Sort</h2></a>
+                        <ul>
+                            <li><input type="radio" class="rd-btn" id="rd-btn1" name="Sort" value="Trending"> <label for="rdbtn1">Trending</label></li>
+                            <li><input type="radio" class="rd-btn" id="rd-btn2" name="Sort" value="Most Popular"> <label for="rdbtn2">Most Popular</label></li>
+                            <li><input type="radio" class="rd-btn" id="rd-btn3" name="Sort" value="Most Relevant"> <label for="rdbtn3">Most Relevant</label></li>
+                            <li><input type="radio" class="rd-btn" id="rd-btn4" name="Sort" value="90s"> <label for="rdbtn4">90s</label></li>
+                            <li><input type="radio" class="rd-btn" id="rd-btn5" name="Sort" value="2K"> <label for="rdbtn5">2K</label></li>
+                        </ul>   
                     </div>
-                    <div class="mov-card-cont">
-                        <img src="https://m.media-amazon.com/images/M/MV5BNWU0NzdiYmUtZWZjYy00Zjc5LWJkYjMtZjFlMjVmMmRhYmVkXkEyXkFqcGdeQXVyMjkxNzQ1NDI@._V1_FMjpg_UX1000_.jpg" alt="poster">
-                        <h5>Nizhal</h5>
-                        <h6>Mystery . Thriller</h6>
-                        <h6>2021 . 1h 58min</h6>
+                </aside>
+                <article class="col-12  col-md-8 col-lg-9">
+                    <div class="row ">
+                        <p name="Tamil"></p>
+                        <h3 class="sub-head mb-4 text-center text-lg-start">Tamil</h3>
+                        <div id="tamil-movie-cards" class="movie-cards row"></div>
                     </div>
-                    <div class="mov-card-cont">
-                        <img src="http://timesofindia.indiatimes.com/photo/81543993.cms" alt="poster">
-                        <h5>Mohan Kumar Fans</h5>
-                        <h6>Comedy . Drama</h6>
-                        <h6>2021 .  2h 6min</h6>
+                    <hr>
+                    <a name="English"></a>
+                    <h3 class="sub-head mb-4 text-center text-lg-start">English</h3>
+                    <div id="english-movie-cards" class="movie-cards row"></div>
+                    <hr>
+                    <a name="Malayalam"></a>
+                    <h3 class="sub-head mb-4">Malayalam</h3>
+                    <div class="movie-cards row">
+                        <!-- <div class="mov-card-cont">
+                            <img src="https://static.toiimg.com/thumb/msid-70735077,width-219,height-317,imgsize-109740/70735077.jpg" alt="poster">
+                            <h5>Anugraheethan Antony</h5>
+                            <h6>Comedy</h6>
+                            <h6>2021 . 2h</h6>
+                        </div>
+                        <div class="mov-card-cont">
+                            <img src="https://static.toiimg.com/thumb/msid-81927200,width-219,height-317,imgsize-20512/81927200.jpg" alt="poster">
+                            <h5>Chathur Mukham</h5>
+                            <h6>Horror . Thriller</h6>
+                            <h6>2021 . 2h 18min</h6>
+                        </div>
+                        <div class="mov-card-cont">
+                            <img src="https://m.media-amazon.com/images/M/MV5BNWU0NzdiYmUtZWZjYy00Zjc5LWJkYjMtZjFlMjVmMmRhYmVkXkEyXkFqcGdeQXVyMjkxNzQ1NDI@._V1_FMjpg_UX1000_.jpg" alt="poster">
+                            <h5>Nizhal</h5>
+                            <h6>Mystery . Thriller</h6>
+                            <h6>2021 . 1h 58min</h6>
+                        </div>
+                        <div class="mov-card-cont">
+                            <img src="http://timesofindia.indiatimes.com/photo/81543993.cms" alt="poster">
+                            <h5>Mohan Kumar Fans</h5>
+                            <h6>Comedy . Drama</h6>
+                            <h6>2021 .  2h 6min</h6>
+                        </div>
+                        <div class="mov-card-cont">
+                            <img src="https://static.toiimg.com/thumb/msid-81083359,width-219,height-317,imgsize-72067/81083359.jpg" alt="poster">
+                            <h5>Black Coffee</h5>
+                            <h6>Comedy</h6>
+                            <h6>2021 . 2h 22min</h6>
+                        </div>
+                        <div class="mov-card-cont">
+                            <img src="https://static.toiimg.com/photo/msid-84411653/Malik.jpg?84411653" alt="poster">
+                            <h5>Malik</h5>
+                            <h6>Political thriller</h6>
+                            <h6>2021 .2h 42m</h6>
+                        </div> -->
                     </div>
-                    <div class="mov-card-cont">
-                        <img src="https://static.toiimg.com/thumb/msid-81083359,width-219,height-317,imgsize-72067/81083359.jpg" alt="poster">
-                        <h5>Black Coffee</h5>
-                        <h6>Comedy</h6>
-                        <h6>2021 . 2h 22min</h6>
+                    <hr>
+                    <a name="Telugu"></a>
+                    <h3 class="sub-head mb-4 text-center text-lg-start">Telugu</h3>
+                    <div class="movie-cards row">
+                        <!-- <div class="mov-card-cont">
+                            <img src="https://m.media-amazon.com/images/M/MV5BNzYwZTczNzItYzg4My00ZDhlLWJmNjgtMGZiOTM4MTMzMDJhXkEyXkFqcGdeQXVyNTgxODY5ODI@._V1_.jpg" alt="poster">
+                            <h5>Narappa</h5>
+                            <h6>Action . Drama</h6>
+                            <h6>2021 . 2h 33m</h6>
+                        </div>
+                        <div class="mov-card-cont">
+                            <img src="https://i2.wp.com/www.eastmojo.com/wp-content/uploads/2021/05/Vakeel-Saab-Pawan-Kalyan-Prakash-Raj-2.jpg?resize=731%2C1024&ssl=1" alt="poster">
+                            <h5>Vakeel Saab</h5>
+                            <h6>Drama</h6>
+                            <h6>2020 . 2h 36m</h6>
+                        </div>
+                        <div class="mov-card-cont">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/7/7e/Jathi_Ratnalu_poster.jpg" alt="poster">
+                            <h5>Jathi Ratnalu</h5>
+                            <h6>Comedy . Drama</h6>
+                            <h6>2021 . 2h 28m</h6>
+                        </div>
+                        <div class="mov-card-cont">
+                            <img src="https://m.media-amazon.com/images/M/MV5BMTQwNzNiNDEtMDRhYy00M2JkLWIyYWItYWE3MzkwM2EyNzQ0XkEyXkFqcGdeQXVyODEyNjEwMDk@._V1_.jpg" alt="poster">
+                            <h5>Tuck Jagadish</h5>
+                            <h6>Drama . Action</h6>
+                            <h6>2021 . 2h 26m</h6>
+                        </div>
+                        <div class="mov-card-cont">
+                            <img src="https://static.toiimg.com/thumb/79257498.cms?width=170&height=240&imgsize=79778" alt="poster">
+                            <h5>Varudu Kaavalenu</h5>
+                            <h6>Romance</h6>
+                            <h6>2021 . 2h 13min</h6>
+                        </div>
+                        <div class="mov-card-cont">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/44/Love_Story_Poster.jpeg/220px-Love_Story_Poster.jpeg" alt="poster">
+                            <h5>Love Story</h5>
+                            <h6>Romance</h6>
+                            <h6>2021 . 2h 37min</h6>
+                        </div> -->
                     </div>
-                    <div class="mov-card-cont">
-                        <img src="https://static.toiimg.com/photo/msid-84411653/Malik.jpg?84411653" alt="poster">
-                        <h5>Malik</h5>
-                        <h6>Political thriller</h6>
-                        <h6>2021 .2h 42m</h6>
+                    <hr>
+                    <a name="Kannada"></a>
+                    <h3 class="sub-head mb-4 text-center text-lg-start">Kannada</h3>
+                    <div class="movie-cards row">
+                        <!-- <div class="mov-card-cont">
+                            <img src="https://static.toiimg.com/thumb/msid-63134630,width-219,height-317,imgsize-58949/63134630.jpg" alt="poster">
+                            <h5>Kotigobba 3</h5>
+                            <h6>Action</h6>
+                            <h6>2021</h6>
+                        </div>
+                        <div class="mov-card-cont">
+                            <img src="https://static.toiimg.com/photo/86861129.cms?imgsize=44754" alt="poster">
+                            <h5>Ninna Sanihake</h5>
+                            <h6>Comedy . Romance</h6>
+                            <h6>2021 . 2h 1min</h6>
+                        </div>
+                        <div class="mov-card-cont">
+                            <img src="https://static.toiimg.com/thumb/msid-86647421,width-219,height-317,imgsize-10024/86647421.jpg" alt="poster">
+                            <h5>Kaage Motte</h5>
+                            <h6>Action</h6>
+                            <h6>2021 . 2h</h6>
+                        </div>
+                        <div class="mov-card-cont">
+                            <img src="https://static.toiimg.com/thumb/msid-82032047,width-219,height-317,imgsize-93145/82032047.jpg" alt="poster">
+                            <h5>Krishna Talkies</h5>
+                            <h6>Horror . Thriller</h6>
+                            <h6>2021 .  2h 26min</h6>
+                        </div>
+                        <div class="mov-card-cont">
+                            <img src="https://static.toiimg.com/thumb/msid-74715016,width-219,height-317,imgsize-57545/74715016.jpg" alt="poster">
+                            <h5>Pogaru</h5>
+                            <h6>Action . Drama . Thriller</h6>
+                            <h6>2021 . 2h 40min</h6>
+                        </div>
+                        <div class="mov-card-cont">
+                            <img src="https://static.toiimg.com/thumb/86474254.cms?width=137&height=195&imgsize=" alt="poster">
+                            <h5>Puksatte Lifu</h5>
+                            <h6>Comedy . Drama</h6>
+                            <h6>2021 . 1h 59min</h6>
+                        </div> -->
                     </div>
-                </div>
-                <hr>
-                <a name="Telugu"></a>
-                <h3 class="sub-head">Telugu</h3>
-                <div class="movie-cards">
-                    <div class="mov-card-cont">
-                        <img src="https://m.media-amazon.com/images/M/MV5BNzYwZTczNzItYzg4My00ZDhlLWJmNjgtMGZiOTM4MTMzMDJhXkEyXkFqcGdeQXVyNTgxODY5ODI@._V1_.jpg" alt="poster">
-                        <h5>Narappa</h5>
-                        <h6>Action . Drama</h6>
-                        <h6>2021 . 2h 33m</h6>
+                    <hr>
+                    <a name="Hindi"></a>
+                    <h3 class="sub-head mb-4 text-center text-lg-start">Hindi</h3>
+                    <div class="movie-cards row">
+                        <!-- <div class="mov-card-cont">
+                            <img src="https://static.toiimg.com/thumb/msid-72007745,width-219,height-317,imgsize-22940/72007745.jpg" alt="poster">
+                            <h5>Bell Bottom</h5>
+                            <h6>Action . Thriller</h6>
+                            <h6>2021 .  2h 10min</h6>
+                        </div>
+                        <div class="mov-card-cont">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/18/99_Songs_%28film_poster%29.jpg/220px-99_Songs_%28film_poster%29.jpg" alt="poster">
+                            <h5>99 Songs</h5>
+                            <h6>Romance . Music</h6>
+                            <h6>2021 .  2h 13min</h6>
+                        </div>
+                        <div class="mov-card-cont">
+                            <img src="https://static.toiimg.com/thumb/msid-71147012,width-219,height-317,imgsize-35530/71147012.jpg" alt="poster">
+                            <h5>The Big Bull</h5>
+                            <h6>Crime . Drama</h6>
+                            <h6>2021 .  2h 35min</h6>
+                        </div>
+                        <div class="mov-card-cont">
+                            <img src="https://static.toiimg.com/thumb/msid-62816067,width-219,height-317,imgsize-23131/62816067.jpg" alt="poster">
+                            <h5>Time To Dance</h5>
+                            <h6>Musical . Romance</h6>
+                            <h6>2021 . 2h 2min</h6>
+                        </div>
+                        <div class="mov-card-cont">
+                            <img src="https://static.toiimg.com/thumb/msid-80452363,width-219,height-317,imgsize-79877/80452363.jpg" alt="poster">
+                            <h5>Sanak</h5>
+                            <h6>Thriller . Action</h6>
+                            <h6>2021 .  1h 57m</h6>
+                        </div>
+                        <div class="mov-card-cont">
+                            <img src="https://static.digit.in/OTT/v2/images/tr:n-ott_home_crousel/shiddat-410461.jpg" alt="poster">
+                            <h5>Shiddat</h5>
+                            <h6>Romance</h6>
+                            <h6>2021 . 2h 26m</h6>
+                        </div> -->
                     </div>
-                    <div class="mov-card-cont">
-                        <img src="https://i2.wp.com/www.eastmojo.com/wp-content/uploads/2021/05/Vakeel-Saab-Pawan-Kalyan-Prakash-Raj-2.jpg?resize=731%2C1024&ssl=1" alt="poster">
-                        <h5>Vakeel Saab</h5>
-                        <h6>Drama</h6>
-                        <h6>2020 . 2h 36m</h6>
-                    </div>
-                    <div class="mov-card-cont">
-                        <img src="https://upload.wikimedia.org/wikipedia/en/7/7e/Jathi_Ratnalu_poster.jpg" alt="poster">
-                        <h5>Jathi Ratnalu</h5>
-                        <h6>Comedy . Drama</h6>
-                        <h6>2021 . 2h 28m</h6>
-                    </div>
-                    <div class="mov-card-cont">
-                        <img src="https://m.media-amazon.com/images/M/MV5BMTQwNzNiNDEtMDRhYy00M2JkLWIyYWItYWE3MzkwM2EyNzQ0XkEyXkFqcGdeQXVyODEyNjEwMDk@._V1_.jpg" alt="poster">
-                        <h5>Tuck Jagadish</h5>
-                        <h6>Drama . Action</h6>
-                        <h6>2021 . 2h 26m</h6>
-                    </div>
-                    <div class="mov-card-cont">
-                        <img src="https://static.toiimg.com/thumb/79257498.cms?width=170&height=240&imgsize=79778" alt="poster">
-                        <h5>Varudu Kaavalenu</h5>
-                        <h6>Romance</h6>
-                        <h6>2021 . 2h 13min</h6>
-                    </div>
-                    <div class="mov-card-cont">
-                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/44/Love_Story_Poster.jpeg/220px-Love_Story_Poster.jpeg" alt="poster">
-                        <h5>Love Story</h5>
-                        <h6>Romance</h6>
-                        <h6>2021 . 2h 37min</h6>
-                    </div>
-                </div>
-                <hr>
-                <a name="Kannada"></a>
-                <h3 class="sub-head">Kannada</h3>
-                <div class="movie-cards">
-                    <div class="mov-card-cont">
-                        <img src="https://static.toiimg.com/thumb/msid-63134630,width-219,height-317,imgsize-58949/63134630.jpg" alt="poster">
-                        <h5>Kotigobba 3</h5>
-                        <h6>Action</h6>
-                        <h6>2021</h6>
-                    </div>
-                    <div class="mov-card-cont">
-                        <img src="https://static.toiimg.com/photo/86861129.cms?imgsize=44754" alt="poster">
-                        <h5>Ninna Sanihake</h5>
-                        <h6>Comedy . Romance</h6>
-                        <h6>2021 . 2h 1min</h6>
-                    </div>
-                    <div class="mov-card-cont">
-                        <img src="https://static.toiimg.com/thumb/msid-86647421,width-219,height-317,imgsize-10024/86647421.jpg" alt="poster">
-                        <h5>Kaage Motte</h5>
-                        <h6>Action</h6>
-                        <h6>2021 . 2h</h6>
-                    </div>
-                    <div class="mov-card-cont">
-                        <img src="https://static.toiimg.com/thumb/msid-82032047,width-219,height-317,imgsize-93145/82032047.jpg" alt="poster">
-                        <h5>Krishna Talkies</h5>
-                        <h6>Horror . Thriller</h6>
-                        <h6>2021 .  2h 26min</h6>
-                    </div>
-                    <div class="mov-card-cont">
-                        <img src="https://static.toiimg.com/thumb/msid-74715016,width-219,height-317,imgsize-57545/74715016.jpg" alt="poster">
-                        <h5>Pogaru</h5>
-                        <h6>Action . Drama . Thriller</h6>
-                        <h6>2021 . 2h 40min</h6>
-                    </div>
-                    <div class="mov-card-cont">
-                        <img src="https://static.toiimg.com/thumb/86474254.cms?width=137&height=195&imgsize=" alt="poster">
-                        <h5>Puksatte Lifu</h5>
-                        <h6>Comedy . Drama</h6>
-                        <h6>2021 . 1h 59min</h6>
-                    </div>
-                </div>
-                <hr>
-                <a name="Hindi"></a>
-                <h3 class="sub-head">Hindi</h3>
-                <div class="movie-cards">
-                    <div class="mov-card-cont">
-                        <img src="https://static.toiimg.com/thumb/msid-72007745,width-219,height-317,imgsize-22940/72007745.jpg" alt="poster">
-                        <h5>Bell Bottom</h5>
-                        <h6>Action . Thriller</h6>
-                        <h6>2021 .  2h 10min</h6>
-                    </div>
-                    <div class="mov-card-cont">
-                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/18/99_Songs_%28film_poster%29.jpg/220px-99_Songs_%28film_poster%29.jpg" alt="poster">
-                        <h5>99 Songs</h5>
-                        <h6>Romance . Music</h6>
-                        <h6>2021 .  2h 13min</h6>
-                    </div>
-                    <div class="mov-card-cont">
-                        <img src="https://static.toiimg.com/thumb/msid-71147012,width-219,height-317,imgsize-35530/71147012.jpg" alt="poster">
-                        <h5>The Big Bull</h5>
-                        <h6>Crime . Drama</h6>
-                        <h6>2021 .  2h 35min</h6>
-                    </div>
-                    <div class="mov-card-cont">
-                        <img src="https://static.toiimg.com/thumb/msid-62816067,width-219,height-317,imgsize-23131/62816067.jpg" alt="poster">
-                        <h5>Time To Dance</h5>
-                        <h6>Musical . Romance</h6>
-                        <h6>2021 . 2h 2min</h6>
-                    </div>
-                    <div class="mov-card-cont">
-                        <img src="https://static.toiimg.com/thumb/msid-80452363,width-219,height-317,imgsize-79877/80452363.jpg" alt="poster">
-                        <h5>Sanak</h5>
-                        <h6>Thriller . Action</h6>
-                        <h6>2021 .  1h 57m</h6>
-                    </div>
-                    <div class="mov-card-cont">
-                        <img src="https://static.digit.in/OTT/v2/images/tr:n-ott_home_crousel/shiddat-410461.jpg" alt="poster">
-                        <h5>Shiddat</h5>
-                        <h6>Romance</h6>
-                        <h6>2021 . 2h 26m</h6>
-                    </div>
-                </div>
-            </article>
+                </article>
+            </div>
         </section>
+        <!-- pagination -->
         <div class="center">
             <div class="pagination">
                 <a href="#">&laquo;</a>
@@ -441,5 +531,6 @@
         </div>
     </footer>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 <script src="./app.js"></script>
 </html>
