@@ -185,8 +185,8 @@ header h3:hover, i:hover
     position: relative;
     background-color: #0E0220;
     color: #FFFFFF;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr; */
     
 }
 
@@ -272,11 +272,11 @@ aside .filter, .sort
     color: #1DA1F2;
 }
 
-.split
+/* .split
 {
     display: grid;
     grid-template-columns: .5fr 3fr;
-}
+} */
 
 .filter a, .sort a
 {
@@ -324,11 +324,10 @@ aside .filter, .sort
 
 .movie-cards
 {
-    display: grid;
-    grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;
+    /* display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr; */
     margin-bottom:20px;
-    gap: 20px;
-    
+    /* gap: 20px; */
 }
 
 .mov-card-cont img
@@ -523,7 +522,9 @@ footer
 }
 
 
-
+#mega_menu{
+    position: inherit;
+}
 
 
 
